@@ -151,7 +151,7 @@
 }
 
 /*navigation slider styles*/
-.slider-dots {
+.slider-dots-header {
   position: absolute;
   max-width: 920px;
   width: 100%;
@@ -216,8 +216,262 @@
 }
 
 /*world surf location map section styles*/
+/*map with location styles*/
+.slider-map {
+  max-width: 1200px;
+  min-height: 635px;
+  background: url(../images/worldMap.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+
+  .slick-current {
+    .slider-dots__content {
+      display: block;
+      width: 285px;
+      padding: 28px 31px 0px 32px;
+    }
+  }
+  .slider-dots__content-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+
+  .lider-dots__content-item {
+    text-align: center;
+    img {
+      margin-bottom: 7px;
+    }
+  }
+
+  .lider-dots__content-num {
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 800;
+  }
+
+  .lider-dots__content-name {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 12px;
+  }
+
+  .slider-dots__content-title {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 1px;
+      background-color: $green;
+    }
+  }
+  .lider-dots__content-link {
+    padding-top: 4px;
+  }
+
+  .slider-dots__content-subtitle {
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 14px;
+  }
+  .slick-list {
+    min-height: 635px;
+  }
+
+  .slider-dots__circle {
+    width: 23px;
+    height: 23px;
+    background-color: $green;
+    border-radius: 50%;
+  }
+
+  .slider-dots__content {
+    display: none;
+    background-color: rgba(#000, 0.8);
+    position: absolute;
+    bottom: 35px;
+    transform: translateX(-50%);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-bottom: 20px solid $green;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      bottom: -21px;
+      left: 50%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  .slider-dots {
+    position: relative;
+  }
+
+  .map-dot--1 {
+    top: 350px;
+    left: 0;
+    .slider-dots__content {
+      transform: translateX(0);
+      &::before {
+        left: 0;
+      }
+    }
+  }
+  .map-dot--2 {
+    top: 270px;
+    left: 0;
+    .slider-dots__circle {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background: url(../images/loc-little.png);
+        background-size: cover;
+        width: 14px;
+        height: 17px;
+        right: -15px;
+        top: -25px;
+      }
+    }
+  }
+  .map-dot--3 {
+    top: 320px;
+    left: 35px;
+  }
+  .map-dot--4 {
+    top: 470px;
+    left: -25px;
+  }
+  .map-dot--5 {
+    top: 230px;
+    left: -65px;
+  }
+  .map-dot--6 {
+    top: 550px;
+    left: 110px;
+  }
+  .map-dot--7 {
+    top: 375px;
+    left: -95px;
+  }
+  .map-dot--8 {
+    top: 520px;
+    left: 35px;
+    .slider-dots__content {
+      transform: translateX(-261px);
+      &::before {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}
+/*slder with photos on location*/
 .surf {
-  padding: 160px 0 210px;
+  padding: 160px 0 120px;
+  background: url(../images/bigLocation.png);
+  background-position: right 200px;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.surf__subtitle {
+  text-align: right;
+  padding-right: 80px;
+  margin-top: -86px;
+}
+
+.surf-slider {
+  padding-top: 110px;
+  .slick-arrow {
+    top: 50px;
+    opacity: 0.25;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .slick-slide:nth-child(4n + 1) {
+    .surf-box {
+      margin-top: 32px;
+    }
+  }
+  .slick-slide:nth-child(4n + 3) {
+    .surf-box {
+      margin-top: 89px;
+    }
+  }
+  .slick-current {
+    .surf-box__inner-btn {
+      display: block;
+    }
+    .surf-box__inner {
+      background-color: rgba(#1c2121, 0.3);
+    }
+  }
+}
+
+.surf-box {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__inner {
+    min-height: 750px;
+    background-color: rgba(#1c2121, 0.8);
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background-color: rgba(#1c2121, 0.3);
+      .surf-box__inner-btn {
+        display: block;
+      }
+    }
+  }
+}
+
+.surf-box__inner-title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  padding: 72px 0 40px 40px;
+  width: 140px;
+}
+
+.surf-box__inner-loc {
+  line-height: 22px;
+  font-size: 16px;
+  letter-spacing: 8px;
+  transform: rotate(-90deg);
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 40px;
+  bottom: 80px;
+  white-space: nowrap;
+  span {
+    font-weight: 100;
+  }
+}
+
+.surf-box__inner-btn {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 @import "media";

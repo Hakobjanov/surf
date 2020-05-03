@@ -35,7 +35,7 @@ a {
   margin: 0 auto;
 }
 
-.subtitle-left {
+.headline-left {
   height: 32px;
   font-size: 22px;
   line-height: 32px;
@@ -80,6 +80,52 @@ a {
       width: 80px;
       height: 1px;
       background-color: $green;
+    }
+  }
+}
+
+.subtitle {
+  display: inline-block;
+  text-align: right;
+  &__head {
+    font-weight: 800;
+    font-size: 40px;
+    padding-right: 10px;
+    span {
+      font-weight: 100;
+    }
+  }
+}
+
+.btn {
+  line-height: 36px;
+  font-size: 40px;
+  font-weight: 800;
+  span {
+    display: inline-block;
+    padding: 17px 57px 15px 17px;
+    background-color: $green;
+    margin-left: 19px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: #fff;
+      top: 50%;
+      left: -10px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 21px;
+      background: url(../images/arrow-right.svg);
+
+      top: 50%;
+      right: 17px;
+      transform: translateY(-50%);
     }
   }
 }
