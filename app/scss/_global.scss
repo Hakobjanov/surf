@@ -35,6 +35,15 @@ a {
   margin: 0 auto;
 }
 
+.surf,
+.holder {
+  padding: 100px 0 120px;
+}
+
+.holder {
+  padding-bottom: 200px;
+}
+
 .headline-left {
   height: 32px;
   font-size: 22px;
@@ -52,6 +61,27 @@ a {
     height: 1px;
     background: #fff;
     left: 0;
+    top: 50%;
+  }
+}
+
+.headline-right {
+  height: 32px;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 7.33333px;
+  color: #ffffff;
+  opacity: 0.5;
+  padding-right: 103px;
+  position: relative;
+  display: inline-block;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background: #fff;
+    right: 0;
     top: 50%;
   }
 }
@@ -97,16 +127,33 @@ a {
   }
 }
 
+.descr {
+  display: inline-block;
+  padding-left: 5px;
+  &__head {
+    font-weight: 800;
+    font-size: 40px;
+    span {
+      font-weight: 100;
+    }
+  }
+}
+
 .btn {
   line-height: 36px;
   font-size: 40px;
   font-weight: 800;
+  padding-left: 5px;
+  transition: all 0.3s ease-in-out;
   span {
     display: inline-block;
     padding: 17px 57px 15px 17px;
     background-color: $green;
     margin-left: 19px;
     position: relative;
+    &:hover {
+      background-color: none;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -128,4 +175,78 @@ a {
       transform: translateY(-50%);
     }
   }
+  &:hover {
+    background-color: $green;
+  }
+  // &:hover span {
+  //   background-color: none;
+  // }
+}
+
+.star-list {
+  li {
+    display: inline-block;
+
+    margin-left: -25px;
+  }
+}
+
+/*styles for hotel room counters*/
+.quantity {
+  display: inline-block;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 45px;
+  height: 42px;
+  display: block;
+
+  border: none;
+  background-color: transparent;
+  font-size: 40px;
+  line-height: 36px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  position: static;
+  float: left;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  top: 50px;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  right: 0;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  right: 25px;
 }
