@@ -141,6 +141,9 @@
     background-size: cover;
     position: relative;
   }
+  &-item2 {
+    background-image: url(../images/headerBg2.jpg);
+  }
 }
 
 .slider-item__info {
@@ -350,6 +353,7 @@
     position: absolute;
     bottom: 35px;
     transform: translateX(-50%);
+    z-index: 1;
     &::before {
       content: "";
       position: absolute;
