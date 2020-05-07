@@ -141,9 +141,29 @@
     background-size: cover;
     position: relative;
   }
-  &-item2 {
-    background-image: url(../images/headerBg2.jpg);
-  }
+}
+.slider-item--2 {
+  background: url(../images/headerBg2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.slider-item--3 {
+  background: url(../images/headerBg3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.slider-item--4 {
+  background: url(../images/headerBg4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .slider-item__info {
