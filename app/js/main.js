@@ -171,3 +171,5 @@ $(function () {
 
   new WOW().init();
 });
+
+//counte doesnt working on other slides
